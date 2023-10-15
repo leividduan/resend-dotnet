@@ -41,6 +41,11 @@ jobs:
         cd ${{ env.TEST_RESULTS_DIRECTORY }}
         ls
         cat resultado-testes.xml
+    - name: Criar Test Summary
+      uses: test-summary/action@v1
+      with:
+        paths: ${{ env.TEST_RESULTS_FILE }}
+      if: always()
 
   pack-push:
     needs: [tests]
