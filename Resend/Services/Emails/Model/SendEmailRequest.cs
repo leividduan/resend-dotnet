@@ -17,7 +17,7 @@ public class SendEmailRequest
 	/// The list of recipients' email addresses.
 	/// </summary>
 	[JsonPropertyName("to")]
-	private List<string> To { get; set; }
+	public List<string> To { get; private set; }
 
 	/// <summary>
 	/// The email subject.
@@ -35,19 +35,19 @@ public class SendEmailRequest
 	/// The list of recipient email addresses.
 	/// </summary>
 	[JsonPropertyName("cc")]
-	private List<string>? Cc { get; set; }
+	public List<string>? Cc { get; set; }
 
 	/// <summary>
 	/// The list of recipient email addresses.
 	/// </summary>
 	[JsonPropertyName("bcc")]
-	private List<string>? Bcc { get; set; }
+	public List<string>? Bcc { get; set; }
 
 	/// <summary>
 	/// The plain text version of the message.
 	/// </summary>
 	[JsonPropertyName("reply_to")]
-	private List<string>? ReplyTo { get; set; }
+	public List<string>? ReplyTo { get; set; }
 
 	/// <summary>
 	/// The HTML version of the message.
@@ -59,19 +59,19 @@ public class SendEmailRequest
 	/// The custom headers of the email.
 	/// </summary>
 	[JsonPropertyName("headers")]
-	private Dictionary<string, string>? Headers { get; set; }
+	public Dictionary<string, string>? Headers { get; set; }
 
 	/// <summary>
 	/// The list of attachments of the email.
 	/// </summary>
 	[JsonPropertyName("attachments")]
-	private List<Attachment>? Attachments { get; set; }
+	public List<Attachment>? Attachments { get; set; }
 
 	/// <summary>
 	/// The tags of the email.
 	/// </summary>
 	[JsonPropertyName("tags")]
-	private List<Tag>? Tags { get; set; }
+	public List<Tag>? Tags { get; set; }
 
 	/// <summary>
 	/// Creates a new instance of SendEmailRequest.
