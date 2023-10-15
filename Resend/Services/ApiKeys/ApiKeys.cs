@@ -2,6 +2,7 @@ using System.Text.Json;
 using Resend.Core.Exception;
 using Resend.Core.Service;
 using Resend.Services.ApiKeys.Model;
+using Resend.Services.Interfaces;
 using RestSharp;
 
 namespace Resend.Services.ApiKeys;
@@ -9,7 +10,7 @@ namespace Resend.Services.ApiKeys;
 /// <summary>
 /// Represents the Resend ApiKeys module.
 /// </summary>
-public class ApiKeys : BaseService
+public class ApiKeys : BaseService, IApiKeys
 {
 	/// <summary>
 	/// Constructs an instance of the ApiKeys class.

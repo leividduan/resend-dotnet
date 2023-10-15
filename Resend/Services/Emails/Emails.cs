@@ -2,6 +2,7 @@ using System.Text.Json;
 using Resend.Core.Exception;
 using Resend.Core.Service;
 using Resend.Services.Emails.Model;
+using Resend.Services.Interfaces;
 using RestSharp;
 
 namespace Resend.Services.Emails;
@@ -9,7 +10,7 @@ namespace Resend.Services.Emails;
 /// <summary>
 /// Represents the Resend Emails module.
 /// </summary>
-public class Emails : BaseService
+public class Emails : BaseService, IEmails
 {
 	/// <summary>
 	/// Constructs an instance of the Emails class.

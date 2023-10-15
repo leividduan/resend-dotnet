@@ -102,7 +102,7 @@ public class Email
 	/// <param name="cc">The cc attribute value.</param>
 	/// <param name="replyTo">The reply_to attribute value.</param>
 	public Email(string id, string obj, string from, string subject, string html, string text, string lastEvent,
-		DateTimeOffset createdAt, List<string> to, List<string> bcc, List<string> cc, List<string> replyTo)
+		DateTime createdAt, List<string> to, List<string> bcc, List<string> cc, List<string> replyTo)
 	{
 		Id = id;
 		Object = obj;

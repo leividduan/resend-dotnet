@@ -2,6 +2,7 @@ using System.Text.Json;
 using Resend.Core.Exception;
 using Resend.Core.Service;
 using Resend.Services.Domains.Models;
+using Resend.Services.Interfaces;
 using RestSharp;
 
 namespace Resend.Services.Domains;
@@ -9,7 +10,7 @@ namespace Resend.Services.Domains;
 /// <summary>
 /// Represents the Resend Emails module.
 /// </summary>
-public class Domains : BaseService
+public class Domains : BaseService, IDomains
 {
 	/// <summary>
 	/// Constructs an instance of the code Domains class.
